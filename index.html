@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>She been cappin in them raps </title>
+  <title>She been cappin in them raps 😅😌🔥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -109,90 +109,6 @@
       letter-spacing: 0.1px;
     }
 
-    /* Pop-up overlay */
-    #adPopup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.95);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(8px);
-      overflow: auto; /* scroll jika konten lebih besar dari layar */
-    }
-
-    /* Kontainer utama pop-up, posisi relatif untuk banner absolute */
-    .popup-main {
-      position: relative;
-      display: inline-block;
-      max-width: 95vw;
-      background: transparent;
-    }
-
-    /* Banner instruksi di atas iklan */
-    .instruction-banner {
-      position: absolute;
-      top: -40px; /* muncul di atas popup-main */
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ff4444;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 8px 20px;
-      border-radius: 40px;
-      white-space: nowrap; /* teks memanjang */
-      border: 2px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      pointer-events: none; /* klik tembus ke iklan */
-      z-index: 20;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Pembungkus iklan dengan scroll jika konten terlalu besar */
-    .ad-wrapper {
-      background: white; /* latar iklan putih */
-      border-radius: 8px;
-      overflow: auto;
-      max-width: 100%;
-      max-height: 80vh; /* agar tidak melebihi layar */
-      line-height: 0;
-    }
-
-    #popup-ad-container {
-      display: block;
-      background: transparent;
-    }
-
-    #popup-ad-container iframe,
-    #popup-ad-container img,
-    #popup-ad-container div {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .popup-footer {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      color: rgba(255,255,255,0.9);
-      font-size: 14px;
-      pointer-events: none;
-      text-shadow: 1px 1px 2px black;
-    }
-
-    #container-f7fc0a99721bb4a327aa256bf1adf6b9 {
-      display: none;
-    }
-
     @media (max-width: 400px) {
       header {
         font-size: 1.09rem;
@@ -220,11 +136,21 @@
 <body>
 
   <header>
+<script>
+  atOptions = {
+    'key' : '836d3e900c4901ac0eb61b39f5ac5351',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://archaicmsflip.com/836d3e900c4901ac0eb61b39f5ac5351/invoke.js"></script>
   </header>
 
   <div class="container">
-    <!-- Video dengan ID agar bisa dikontrol -->
-    <video id="myVideo" controls autoplay playsinline controlslist="nofullscreen nodownload noremoteplayback" disablepictureinpicture preload="metadata">
+    <!-- Video tanpa fullscreen -->
+    <video controls autoplay playsinline controlslist="nofullscreen nodownload noremoteplayback" disablepictureinpicture preload="metadata">
       <source src="https://cdn.videy.co/E4kveexI1.mp4" type="video/mp4">
       Browser Anda tidak mendukung pemutar video.
     </video>
@@ -233,21 +159,6 @@
   <footer>
     © 2025 Blacked Streaming. All rights reserved.
   </footer>
-
-  <!-- Pop-up iklan -->
-  <div id="adPopup">
-    <div class="popup-main">
-      <div class="instruction-banner">🔴 CLICK THE IMAGE TO CONTINUE</div>
-      <div class="ad-wrapper">
-        <div id="popup-ad-container"></div>
-      </div>
-    </div>
-    <div class="popup-footer">AFTER CLICKING THE IMAGE, THE VIDEO WILL CONTINUE</div>
-  </div>
-
-  <!-- Script iklan -->
-  <script async="async" data-cfasync="false" src="https://archaicmsflip.com/5f4267b3a827c96d9795642548181b38/invoke.js"></script>
-<div id="container-5f4267b3a827c96d9795642548181b38"></div>
 
   <script>
     // Cegah masuk fullscreen lewat JavaScript
@@ -271,68 +182,10 @@
         if (e.ctrlKey && ["U","S"].includes(e.key.toUpperCase())) e.preventDefault();
       });
     })();
-
-    // Pop-up logic
-    (function() {
-      const video = document.getElementById('myVideo');
-      const popup = document.getElementById('adPopup');
-      const popupAdContainer = document.getElementById('popup-ad-container');
-      const originalContainer = document.getElementById('container-f7fc0a99721bb4a327aa256bf1adf6b9');
-      let popupShown = false;
-
-      // Pindahkan container iklan ke dalam popup
-      if (originalContainer && popupAdContainer) {
-        popupAdContainer.appendChild(originalContainer);
-        originalContainer.style.display = 'block';
-      }
-
-      function showAdPopup() {
-        if (popupShown) return;
-        popupShown = true;
-        popup.style.display = 'flex';
-        video.pause();
-      }
-
-      function hideAdPopupAndContinue() {
-        popup.style.display = 'none';
-        video.play().catch(() => {});
-      }
-
-      // Klik di area iklan: hanya lanjutkan jika yang diklik adalah LINK
-      popupAdContainer.addEventListener('click', function(e) {
-        const link = e.target.closest('a');
-        if (link) {
-          // Biarkan tautan terbuka, lalu tutup pop-up setelah jeda
-          setTimeout(() => {
-            hideAdPopupAndContinue();
-          }, 300);
-        }
-      });
-
-      // Klik di luar pop-up (overlay hitam) tidak menutup, hanya efek getar
-      popup.addEventListener('click', function(e) {
-        if (e.target === popup) {
-          popup.style.animation = 'none';
-          popup.offsetHeight;
-          popup.style.animation = null;
-        }
-      });
-
-      // Pop-up muncul 5 detik setelah video diputar
-      video.addEventListener('play', function() {
-        if (!popupShown) {
-          setTimeout(showAdPopup, 5000);
-        }
-      });
-
-      // Jika video sudah play saat halaman dimuat
-      if (video.readyState >= 2 && !video.paused) {
-        setTimeout(showAdPopup, 5000);
-      }
-    })();
   </script>
 
- <!-- Histats.com  START  (aync)-->
+
+   <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4962364,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
